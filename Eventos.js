@@ -13,7 +13,7 @@ function agregarNumero(dato) {
 function verficarNumero(dato) {
     let datoString = dato.toString();
     let datoControl = verficarSimbolo(dato);
-    let a = parseInt(datoString) ;
+    let a = parseInt(datoString);
 
     if (datoOperacion == null) {
         if (datoControl == false) {
@@ -27,29 +27,25 @@ function verficarNumero(dato) {
                 console.log(primerDato);
                 return primerDato;
             }
-        } 
-        // terminar la logica para las comas
-        else if (datoControl == true && datoString !== a) { 
-             
-            }
         }
     
+    }
+
     else if (datoOperacion != null && datoString !== a) {
-        if (datoControl == false) {    
+        if (datoControl == false) {
             if (segundoDato == null) {
                 segundoDato = datoString;
                 console.log(segundoDato);
                 return segundoDato;
-            } 
+            }
             else {
                 segundoDato = segundoDato + datoString;
                 console.log(segundoDato);
                 return segundoDato;
             }
         }
-        // terminar la logica para las comas
-        else if (datoControl == true && datoString !== a) { 
-            
+        else if (datoControl == true) {
+
         }
     }
 }

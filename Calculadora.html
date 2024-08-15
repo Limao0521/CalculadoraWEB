@@ -4,20 +4,20 @@
     <title>Calculadora</title>
     <script src="Calculadora.js"></script>
     <script src="Eventos.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="CalculadoraClaro.css">
 </head>
 <body>
-    <div class="calculator">
-        <aside class="history"></aside>
-        <input type="text" class="display" id="displayText">
-        <div class="buttons">
-            <button class="simbolo" onclick="agregarSimbolo(',')">,</button>
-            <button class="calculo" onclick="operacion('=')">=</button>
-            <button class="calculo" onclick="operacion('C')">C</button>
-            <button class="operacion" onclick="agregarOperacion('/')">/</button>
-            <button class="operacion" onclick="agregarOperacion('*')">*</button>
-            <button class="operacion" onclick="agregarOperacion('-')">-</button>
-            <button class="operacion" onclick="agregarOperacion('+')">+</button>
+    <div class="parent">
+       
+        <div class="div2">
+            <input type="text" class="display" id="displayText">
+        </div>
+        <div class="div3">
+            <button class="consola" onclick="consola('=')">=</button>
+            <button class="consola" onclick="consola('C')">C</button>
+        </div>
+        <div class="div4">
+            
             <button class="numero" onclick="agregarNumero(9)">9</button>
             <button class="numero" onclick="agregarNumero(8)">8</button>
             <button class="numero" onclick="agregarNumero(7)">7</button>
@@ -27,9 +27,16 @@
             <button class="numero" onclick="agregarNumero(3)">3</button>
             <button class="numero" onclick="agregarNumero(2)">2</button>
             <button class="numero" onclick="agregarNumero(1)">1</button>
+            <button class="simbolo" onclick="agregarSimbolo(',')">,</button>
             <button class="numero" onclick="agregarNumero(0)">0</button>
         </div>
+        <div class="div5">
+            <button class="operacion" onclick="agregarOperacion('/')">/</button>
+            <button class="operacion" onclick="agregarOperacion('*')">*</button>
+            <button class="operacion" onclick="agregarOperacion('-')">-</button>
+            <button class="operacion" onclick="agregarOperacion('+')">+</button>
         </div>
+        <div class="div6"></div>
     </div>
 </body>
 </html>
