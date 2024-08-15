@@ -7,92 +7,94 @@ const display = document.getElementById('displayText');
 
 function agregarNumero(dato) {
     const display = document.getElementById('displayText');
-    display.value = verficarNumero(dato);
+    parseFloat(display.value = verficarNumero(dato));
 }
 
 function verficarNumero(dato) {
     let datoString = dato.toString();
     let datoControl = verficarSimbolo(dato);
-    let a = 4;
+    let a = parseInt(datoString) ;
 
-    if (datoControl == null) {
-
-        if (datoOperacion == null) {
-
+    if (datoOperacion == null) {
+        if (datoControl == false) {
             if (primerDato == null) {
                 primerDato = datoString;
                 console.log(primerDato);
                 return primerDato;
             }
-
             else {
                 primerDato = primerDato + datoString;
                 console.log(primerDato);
                 return primerDato;
             }
+        } 
+        // terminar la logica para las comas
+        else if (datoControl == true && datoString !== a) { 
+             
+            }
         }
-        else if (datoOperacion != null && dato !== a ) {
+    
+    else if (datoOperacion != null && datoString !== a) {
+        if (datoControl == false) {    
             if (segundoDato == null) {
                 segundoDato = datoString;
                 console.log(segundoDato);
                 return segundoDato;
-            } else {
+            } 
+            else {
                 segundoDato = segundoDato + datoString;
                 console.log(segundoDato);
                 return segundoDato;
             }
         }
-    } 
-    else {
-        if (datoOperacion == null) {
-            
-        }
-        else if (datoOperacion != null) {
+        // terminar la logica para las comas
+        else if (datoControl == true && datoString !== a) { 
             
         }
     }
 }
 
-    function agregarSimbolo(dato) {
-        const display = document.getElementById('displayText');
 
-        display.value = dato;
-        console.log(dato);
+function agregarSimbolo(dato) {
+    const display = document.getElementById('displayText');
 
-        datoSimbolo = dato;
+    display.value = dato;
+    console.log(dato);
+
+    datoSimbolo = dato;
+}
+
+function verficarSimbolo(dato) {
+    if (datoSimbolo == null) {
+        return false;
+    } else if (datoSimbolo == dato) {
+        return true;
     }
+}
 
-    function verficarSimbolo(dato) {
-        if (dato == null) {
-            return null;
-        } else {
-            return datoSimbolo;
-        }
+function agregarSimbolo(dato) {
+    const display = document.getElementById('displayText');
+
+    display.value = dato;
+    console.log(dato);
+
+    datoSimbolo = dato;
+}
+
+
+//cambiar los metodos de operacion para lpos que no son correctos
+function agregarOperacion(dato) {
+    if (dato == '+') {
+        datoOperacion = '+';
     }
-
-    function agregarSimbolo(dato) {
-        const display = document.getElementById('displayText');
-
-        display.value = dato;
-        console.log(dato);
-
-        datoSimbolo = dato;
+    else if (dato == '-') {
+        datoOperacion = '-';
     }
-
-
-    //cambiar los metodos de operacion para lpos que no son correctos
-    function agregarOperacion(dato) {
-        if (dato == '+') {
-            datoOperacion = '+';
-        }
-        else if (dato == '-') {
-            datoOperacion = '-';
-        }
-        else if (dato == '*') {
-            datoOperacion = '*';
-        }
-        else if (dato == '/') {
-            datoOperacion = '/';
-        }
+    else if (dato == '*') {
+        datoOperacion = '*';
     }
+    else if (dato == '/') {
+        datoOperacion = '/';
+    }
+}
 
