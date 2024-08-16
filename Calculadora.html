@@ -10,16 +10,16 @@
     <div class="parent">
        
         <div class="div2">
-            <input type="text" class="display" id="displayText">
+            <input type="text" class="display" id="displayText" readonl>
         </div>
         <div class="div3">
             <button class="consola" onclick="igual('=')">=</button>
             <button class="consola" onclick="borrar('C')">C</button>
-            
-        
+            <button class="consola" onclick="limpiarHistorial()">CH</button>
+            <button class="consola" onclick="cambiarModo()">☀️/🌙</button>
         </div>
+        
         <div class="div4">
-            
             <button class="numero" onclick="agregarNumero(9)">9</button>
             <button class="numero" onclick="agregarNumero(8)">8</button>
             <button class="numero" onclick="agregarNumero(7)">7</button>
@@ -32,13 +32,17 @@
             <button class="simbolo" onclick="agregarSimbolo(',')">,</button>
             <button class="numero" onclick="agregarNumero(0)">0</button>
         </div>
+        
         <div class="div5">
-            <button class="operacion" onclick="agregarOperacion('/')">/</button>
-            <button class="operacion" onclick="agregarOperacion('*')">*</button>
-            <button class="operacion" onclick="agregarOperacion('-')">-</button>
-            <button class="operacion" onclick="agregarOperacion('+')">+</button>
+            <button class="operacion" id="suma" onclick="agregarOperacion('+')">+</button>
+            <button class="operacion" id="resta" onclick="agregarOperacion('-')">-</button>
+            <button class="operacion" id="multiplicacion" onclick="agregarOperacion('*')">*</button>
+            <button class="operacion" id="division" onclick="agregarOperacion('/')">/</button>
         </div>
-        <div class="div6"></div>
+        
+        <div class="div6">
+            <ul class="historial" id="historialLista"></ul>
+        </div> 
     </div>
 </body>
 </html>
