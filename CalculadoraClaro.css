@@ -1,0 +1,141 @@
+/* Estilo general */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at center, #1c1c1c, #000); /* Degradado sutil para darle textura al fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Sombra suave para levantar la calculadora del fondo */
+}
+
+/* Estilos de la cuadrícula */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    height: 75vh;
+    padding: 15px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Display - Diferenciado del fondo */
+.div2 input {
+    width: 100%;
+    height: 80%;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: right;
+    background: #222; /* Color de fondo más claro que el fondo principal */
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra interna para darle profundidad */
+}
+
+/* Div3 - Botones de consola */
+.div3 {
+    grid-area: 3 / 1 / 4 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.div3 button {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: #a5a5a5;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para botones */
+}
+
+/* Div4 - Pad numérico */
+.div4 {
+    grid-area: 3 / 2 / 5 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.div4 button {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para botones */
+}
+
+/* Div5 - Botones de operación en columna */
+.div5 {
+    grid-area: 3 / 4 / 5 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div5 button {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: #f1a33c;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para botones */
+}
+
+/* Div6 - Elementos alineados hacia abajo */
+.div6 {
+    grid-area: 2 / 5 / 5 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.div6 button {
+    margin-bottom: 5px;
+    width: 80%;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: #a5a5a5;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para botones */
+}
+
+/* Ajustes adicionales */
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
